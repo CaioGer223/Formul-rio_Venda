@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas</title>
+
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="cabecalho">
+        <h1>Cadastre seu veículo</h1>
+        <p>Com nosso sistema suas chances de venda aumentam</p>
+    </div>
+
+    <main>
+        <header>
+            <p class="titulo">FORMULÁRIO</p>
+        </header>
+
+        <section>
+            <div id="textoSuperior">
+                <h1>VENDA FÁCIL SEU CARRO</h1>
+                <h3>Descreva as características e marque os opcionais que ele possui</h3>
+            </div>
+
+            <form>
+                <div> <!--TITULO DO ANUNCIO-->
+                    <h3 class="subtitulo">Título do anúncio</h3>
+                    <input id="titulo" name="titulo" type="text" required placeholder="Um título para anunciar seu carro">
+                </div>
+
+                <div> <!--VALOR DE VENDA-->
+                    <h3 class="subtitulo">Valor de venda</h3>
+                    <span>R$</span>
+                    <input id="price" name="price" type="number" required placeholder="0,00">
+                </div>
+
+                <div> <!--DESCRIÇÃO-->
+                    <h3 class="subtitulo">Descrição</h3>
+                    <textarea id="descricao" name="descricao" required placeholder="Informações adicionais sobre o veículo"></textarea>
+                </div>
+
+                <div> <!--MARCA-->
+                    <h3 class="subtitulo">Marca</h3>
+                    <input id="marca" name="marca" type="text" required placeholder="Digite a marca do veículo">
+                </div>
+
+                <div> <!--MODELO-->
+                    <h3 class="subtitulo">Modelo</h3>
+                    <input id="modelo" name="modelo" type="text" required placeholder="Digite o modelo do veículo">
+                </div>
+
+                <div> <!--QUILOMETRAGEM-->
+                    <h3 class="subtitulo">Quilometragem</h3>
+                    <input id="km" name="km" type="number" required placeholder="Digite a quilometragem do veículo">
+                </div>
+
+                <div> <!--DATAS DA COMPRA-->
+                    <h3 class="subtitulo">Data de compra</h3>
+                    <input id="data" name="data" type="date" required>
+                </div>
+                
+                <div> <!--TIPOS DE CAMBIO-->
+                    <h3 class="subtitulo">Tipo de câmbio</h3>
+                    <div id="cambio"> 
+                        <div>
+                            <label for="manual">Manual</label>
+                            <input type="radio" id="manual" name="cambio" value="Manual" required>
+                        </div>
+                        <div>
+                            <label for="automatico">Automático</label>
+                            <input type="radio" id="automatico" name="cambio" value="Automático" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="opcionais">
+
+                    <h3 class="subtitulo">Opcionais</h3>
+
+                    <div class="opcoes">
+
+                        <div class="coluna">
+
+                            <div class="linha">
+                                <input type="checkbox" id="airbag" name="opcional" value="Airbag"> 
+                                <label for="airbag">Airbag</label>
+                            </div>
+
+                            <div class="linha">
+                                <input type="checkbox" id="alarme" name="opcional" value="Alarme"> 
+                                <label for="alarme">Alarme</label>
+                            </div>
+
+                            <div class="linha">
+                                <input type="checkbox" id="ar_condicionado" name="opcional" value="Ar Condicionado"> 
+                                <label for="ar_condicionado">Ar Condicionado</label>
+                            </div>
+
+                            <div class="linha">
+                                <input type="checkbox" id="camera_re" name="opcional" value="Câmera de Ré"> 
+                                <label for="camera_re">Câmera de Ré</label>
+                            </div>
+
+                        </div>
+
+                        <div class="coluna">
+
+                            <div class="linha">
+                                <input type="checkbox" id="assistente_pista" name="opcional" value="Assistente de Pista"> 
+                                <label for="assistente_pista">Assistente de Pista</label>
+                            </div>
+
+                            <div class="linha">
+                                <input type="checkbox" id="partida_keyless" name="opcional" value="Partida Keyless"> 
+                                <label for="partida_keyless">Partida Keyless</label>
+                            </div>
+
+                            <div class="linha">
+                                <input type="checkbox" id="integracao_celular" name="opcional" value="Integração com Celular"> 
+                                <label for="integracao_celular">Integração com Celular</label>
+                            </div>
+
+                            <div class="linha">
+                                <input type="checkbox" id="banco_couro" name="opcional" value="Banco de Couro"> 
+                                <label for="banco_couro">Banco de Couro</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                
+
+                <div id="fotos">
+                    <h3 class="subtitulo">Fotos do carro</h3>
+                    <input type="file" name="fotos" multiple accept="image/*">
+                </div>
+
+                <input type="submit" id="enviar" value="Enviar Anúncio">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
