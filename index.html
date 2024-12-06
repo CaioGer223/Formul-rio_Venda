@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
     <script src="script.js" defer></script>
+
 </head>
 <body>
     <div id="cabecalho">
@@ -27,7 +28,7 @@
                 <h3>Descreva as características e marque os opcionais que ele possui</h3>
             </div>
 
-            <form>
+            <form action="formularioVenda.php" method="post">
                 <div> <!--TITULO DO ANUNCIO-->
                     <h3 class="subtitulo">Título do anúncio</h3>
                     <input id="titulo" name="titulo" type="text" required placeholder="Um título para anunciar seu carro">
@@ -138,10 +139,12 @@
 
                 <div id="fotos">
                     <h3 class="subtitulo">Fotos do carro</h3>
+
                     <input type="file" name="fotos" multiple accept="image/*">
                 </div>
 
                 <input type="submit" id="enviar" value="Enviar Anúncio">
+
             </form>
         </section>
     </main>
